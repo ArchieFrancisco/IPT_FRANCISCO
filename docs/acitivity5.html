@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Francisco</title>
+    <style>
+        /* Default Light Mode */
+        body {
+            font-family: Times New Roman;
+            background-color: #ffffff;
+            color: #000000;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .dark-mode {
+            background-color: #333333;
+            color: #ffffff;
+        }
+
+        .container {
+           
+            margin-top: 50px;
+        }
+
+        input {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>IPT Activity 1</h1>
+    <input type="number" id="num1" placeholder="Enter first number">
+    <input type="number" id="num2" placeholder="Enter second number">
+    <br><button onclick="addNumbers()">Add</button>
+    <p id="result"></p>
+
+    <button onclick="ChangeColor()"> Dark/Light Mode</button>
+    
+</div>
+
+<script>
+    function addNumbers() {
+        const num1 = parseFloat(document.getElementById('num1').value);
+        const num2 = parseFloat(document.getElementById('num2').value);
+        const result = num1 + num2;
+
+        document.getElementById('result').innerText = "Result: " + result;
+    }
+
+    function ChangeColor() {
+        document.body.classList.toggle('dark-mode');
+    }
+</script>
+
+</body>
+</html>
